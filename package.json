@@ -1,0 +1,21 @@
+{
+  "name": "quick-events-api",
+  "version": "0.1.2",
+  "description": "Quick events API",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": "",
+  "author": "Brayan Guerrero",
+  "dependencies": {
+    "async": "~0.2.8",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "morgan": "^1.9.1",
+    "socket.io": "~0.9.14",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

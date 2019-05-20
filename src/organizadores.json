@@ -1,0 +1,65 @@
+[
+    {
+        "id": "1",
+        "email": "brayang26_@hotmail.com",
+        "usuario": "BrayanG26",
+        "password": "40401226",
+        "nombres": "Brayan",
+        "apellidos": "Guerrero",
+        "organizacion": "UIS"
+    },
+    {
+        "id": "2",
+        "email": "brayanguerrero4040@gmail.com",
+        "usuario": "BrayanG",
+        "password": "15342",
+        "nombres": "Brayan",
+        "apellidos": "Guerrero",
+        "organizacion": "UNAB"
+    },
+    {
+        "id": "3",
+        "email": "brayang26_@outlook.com",
+        "usuario": "BrayanGF",
+        "password": "paraprueba",
+        "nombres": "Brayan",
+        "apellidos": "Guerrero",
+        "organizacion": "UDES"
+    },
+    {
+        "id": "4",
+        "email": "ivan4029@hotmail.com",
+        "usuario": "ivan12",
+        "password": "bicirueditas",
+        "nombres": "Rolando Ivan",
+        "apellidos": "Guerrero",
+        "organizacion": "UNAL"
+    },
+    {
+        "id": "5",
+        "email": "claudiamaria@hotmail.com",
+        "usuario": "claumaria",
+        "password": "bicibebe",
+        "nombres": "Claudia",
+        "apellidos": "Florez",
+        "organizacion": "UNIMINUTO"
+    },
+    {
+        "id": "6",
+        "email": "brayanguerrero4040@yahoo.com",
+        "usuario": "bguerrerof",
+        "password": "lapuerca",
+        "nombres": "Brayan",
+        "apellidos": "Guerrero",
+        "organizacion": "UCC"
+    },
+    {
+        "id": "7",
+        "email": "rolandoguerrero@gmail.com",
+        "usuario": "riga",
+        "password": "u1sapp",
+        "nombres": "Rolando Ivan",
+        "apellidos": "Guerrero",
+        "organizacion": "UDI"
+    }
+]
