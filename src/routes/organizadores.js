@@ -28,8 +28,7 @@ router.get('/', (req, res) => {
         });
         if (!response.validation) {
             response.msg = 'The user not exists';
-        }
-        console.log(response);        
+        }       
         res.status(200).json(response);
     } else {
         res.status(400).json({ error: 'I need a userName and password' });
@@ -39,13 +38,16 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     const { id } = req.params;
-    var response;
+    var response = {};
     _.each(organizadores, (organizador, i) => {
         if (organizador.id == id) {
-            response = organizador;
+            response.msg = "The user was found successfully";
+            response.organizador = organizador;
+            delete response.organizador.password;
         }
     });
     if (response) {
+        console.log(response);
         res.status(200).json(response);
     } else {
         res.status(404).json({ error: 'Resource not found :(' });
