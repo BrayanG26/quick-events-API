@@ -1,22 +1,28 @@
 [
     {
-        "id":"201",
+        "id": "201",
         "organizador": "BrayanG26",
-		"nombre": "Convocatoria para auxiliar contable CEIS",
-		"lugar": "LP 310",
-		"fecha": "09/30/2018",
-		"hora": "14:00",
+        "nombre": "Convocatoria para auxiliar contable CEIS",
+        "lugar": "LP 310",
+        "fecha": "09/30/2018",
+        "hora": "14:00",
         "ciudad": "Floridablanca",
-        "capacidad":60,
-        "categoria":"empleo",
-        "costo":0,
+        "capacidad": 60,
+        "categoria": "empleo",
+        "sePaga": true,
         "url": "http://cormoran.uis.edu.co/eisi/",
         "descripcion": "El dia indicado se hara una salida recreativa a las cascadas las golondrinas. Estar presente a las 8 am en la Estacion de servicio Lomas del Viento",
-        "asistentes":40,
-        "meinteresa":10,
-        "compartido":5,
-        "megusta":10,
-		"estado": "creado"
+        "asistentes": 40,
+        "meinteresa": 10,
+        "compartido": 5,
+        "megusta": 10,
+        "estado": "creado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "202",
@@ -27,15 +33,21 @@
         "hora": "16:00",
         "ciudad": "Bucaramanga",
         "capacidad": 500,
-        "categoria":"empleo",
-        "costo": 0,
+        "categoria": "empleo",
+        "sePaga": false,
         "url": "http://www.empleos.uis.edu.co",
         "descripcion": "No se pierda la mejor feria de toda la historia",
         "asistentes": 30,
         "meinteresa": 15,
         "compartido": 5,
         "megusta": 5,
-        "estado": "creado"
+        "estado": "creado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "203",
@@ -47,14 +59,20 @@
         "ciudad": "Girón",
         "capacidad": 140,
         "categoria": "deporte",
-        "costo": 0,
+        "sePaga": true,
         "url": "",
         "descripcion": "Evento de teatro para la comunidad universitaria UIS",
         "asistentes": 40,
         "meinteresa": 10,
         "compartido": 6,
         "megusta": 5,
-        "estado": "creado"
+        "estado": "creado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "204",
@@ -66,14 +84,20 @@
         "ciudad": "Medellín",
         "capacidad": 10,
         "categoria": "empleo",
-        "costo": 0,
+        "sePaga": false,
         "url": "",
         "descripcion": "Metodo de prueba para probar mi propio backend",
         "asistentes": 40,
         "meinteresa": 2,
         "compartido": 5,
         "megusta": 1,
-        "estado": "creado"
+        "estado": "creado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "205",
@@ -85,14 +109,20 @@
         "ciudad": "Lima",
         "capacidad": 20,
         "categoria": "deporte",
-        "costo": 0,
+        "sePaga": false,
         "url": "",
         "descripcion": "Metodo de prueba para probar mi propio backend",
         "asistentes": 40,
         "meinteresa": 5,
         "compartido": 5,
         "megusta": 1,
-        "estado": "publicado"
+        "estado": "publicado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "206",
@@ -104,14 +134,20 @@
         "ciudad": "Melbourne",
         "capacidad": 100,
         "categoria": "deporte",
-        "costo": 0,
+        "sePaga": true,
         "url": "",
         "descripcion": "Metodo de prueba para probar mi propio backend",
         "asistentes": 15,
         "meinteresa": 10,
         "compartido": 2,
         "megusta": 10,
-        "estado": "eliminado"
+        "estado": "eliminado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "207",
@@ -123,14 +159,20 @@
         "ciudad": "Indian",
         "capacidad": 120,
         "categoria": "deporte",
-        "costo": 0,
+        "sePaga": false,
         "url": "https://www.atptour.com/en/tournaments/indian-wells/404/overview",
         "descripcion": "Metodo de prueba para probar mi propio backend",
         "asistentes": 2,
         "meinteresa": 10,
         "compartido": 5,
         "megusta": 4,
-        "estado": "publicado"
+        "estado": "publicado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "208",
@@ -142,14 +184,20 @@
         "ciudad": "Flandes",
         "capacidad": 40,
         "categoria": "deporte",
-        "costo": 0,
+        "sePaga": true,
         "url": "https://www.visitflanders.com/es/que--hacer/eventos/top/tour-de-flandes-para-ciclistas-amateur.jsp",
         "descripcion": "Metodo de prueba para probar mi propio backend",
         "asistentes": 10,
         "meinteresa": 5,
         "compartido": 5,
         "megusta": 10,
-        "estado": "terminado"
+        "estado": "terminado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     },
     {
         "id": "209",
@@ -161,13 +209,19 @@
         "ciudad": "Bucaramanga",
         "capacidad": 150,
         "categoria": "teatro",
-        "costo": 0,
+        "sePaga": true,
         "url": "https://www.cinecolombia.com/pelicula/bucaramanga/capitana-marvel",
         "descripcion": "La película es protagonizada por la ganadora de un premio de la Academia® Brie Larson, Samuel L. Jackson, Ben Mendelsohn, Djimon Hounsou, Lee Pace, Lashana Lynch, Gemma Chan, Algenis Perez Soto, Rune Temte, McKenna Grace, con Clark Gregg y Jude Law.",
         "asistentes": 30,
         "meinteresa": 15,
         "compartido": 5,
         "megusta": 5,
-        "estado": "publicado"
+        "estado": "publicado",
+        "calificacion": {
+            "logistica": 0,
+            "comodidad": 0,
+            "entretenido": 0,
+            "interesante": 0
+        }
     }
 ]

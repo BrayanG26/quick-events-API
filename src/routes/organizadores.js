@@ -13,12 +13,14 @@ router.get('/', (req, res) => {
         }
     }
     if (Object.keys(req.query).length) {
+        console.log('Object.keys(req.query).length: ' + Object.keys(req.query).length);
         flag = true;
     }
     console.log(queries);
     if (flag) {
         var usuario = queries['usuario'] || '';
         var password = queries['password'] || '';
+
         _.each(organizadores, (organizador, i) => {
             if (organizador['usuario'] == usuario && organizador['password'] == password) {
                 response.idUser = organizador.id;
@@ -28,7 +30,7 @@ router.get('/', (req, res) => {
         });
         if (!response.validation) {
             response.msg = 'The user not exists';
-        }       
+        }
         res.status(200).json(response);
     } else {
         res.status(400).json({ error: 'I need a userName and password' });
