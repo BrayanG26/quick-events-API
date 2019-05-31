@@ -4,6 +4,7 @@ const router = Router();
 
 const organizadores = require('../organizadores.json');
 
+// Listar todos los organizadores
 router.get('/', (req, res) => {
     var flag = false, response = {}, queries = {};
     response.validation = false;
@@ -13,7 +14,6 @@ router.get('/', (req, res) => {
         }
     }
     if (Object.keys(req.query).length) {
-        console.log('Object.keys(req.query).length: ' + Object.keys(req.query).length);
         flag = true;
     }
     console.log(queries);
@@ -38,6 +38,7 @@ router.get('/', (req, res) => {
 
 });
 
+// Obtener organizador por su ID
 router.get('/:id', (req, res) => {
     const { id } = req.params;
     var response = {};

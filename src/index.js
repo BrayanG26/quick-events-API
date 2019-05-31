@@ -17,6 +17,7 @@ app.use(cors());
 //middlewares
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json({limit:'10mb'}));
 app.use(express.json());
 
 //routes
