@@ -1,8 +1,23 @@
 const { Router } = require('express');
 const _ = require('underscore');
 const router = Router();
+const multer = require('multer');
+const path = require('path');
 
 const eventos = require('../eventos.json');
+
+// Set storage engine
+const storage = multer.diskStorage({
+    destination:'./public/uploads',
+    filename:function(req,file,cb){
+        cb(null,file.fieldname+'-'+Date.now()+path.extname(file.originalname));
+    }
+});
+
+// Init upload
+const upload = multer({
+    storage:storage
+}).array('images',10);
 
 // Listar todos los eventos
 router.get('/', (req, res) => {
@@ -85,10 +100,15 @@ router.post('/:id/images', (req, res) => {
     // const newEvento = { ...req.body, id };
     // console.log(newEvento);
     // res.status(200).json(newEvento);
-    console.log('route id: '+id);
-    console.log(req.file);
-    _.each(req.body, (elemento, i) => {
-        console.log(elemento.file);
+    console.log('route id: ' + id);
+    upload(req,res, (err) =>{
+        if(err){
+            console.log('There was an error...');
+            console.log(err);
+        }else{
+            res.status(200).json({msg:'uploaded successfully'})
+            console.log('There was not any error');
+        }
     });
 });
 module.exports = router;

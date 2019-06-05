@@ -3,6 +3,11 @@ const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
 
+
+
+
+
+
 //settings
 app.set('port', process.env.PORT || 3000);
 app.set('json spaces', 2);
@@ -13,11 +18,12 @@ app.use(function (req, res, next) {
     next();
 });
 app.use(cors());
+app.use(express.static('./public')); // Directory to save images
 
 //middlewares
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json({limit:'10mb'}));
+app.use(express.json({ limit: '10mb' }));
 app.use(express.json());
 
 //routes
