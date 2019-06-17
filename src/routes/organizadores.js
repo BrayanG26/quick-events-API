@@ -57,4 +57,38 @@ router.get('/:id', (req, res) => {
     }
 });
 
+// Modificar un organizador
+router.put('/:id', (req, res) => {
+    console.log('put method organizadores.js');
+    console.log(req.body);
+    var response = {};
+    const { id } = req.params;
+    const { email, usuario, password, nPassword, nombres, apellidos, organizacion } = req.body;
+    _.each(organizadores, (organizador, i) => {
+        if (organizador.id == id) {
+            console.log(organizador);
+            if (password) {
+                console.log('> ' + password);
+                console.log('> ' + organizador.password);
+
+                if (organizador.password == password) {
+                    console.log('verificar si coinciden las contraseñas');
+                    organizador.password = nPassword;
+                    console.log(organizador);
+                    response.success = true;
+                    response.usuario = organizador;
+                    delete response.usuario.password;
+                    res.status(200).json(response);
+                } else {
+                    console.log('Your password was wrong');
+                    res.status(500).json({ success: false, error: 'Your password was wrong' });
+                }
+            } else {
+                organizador = { ...req.body, id };
+                res.status(200).json(organizador);
+            }
+        }
+    });
+});
+
 module.exports = router;

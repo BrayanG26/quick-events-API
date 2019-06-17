@@ -8,20 +8,39 @@ const eventos = require('../eventos.json');
 
 // Set storage engine
 const storage = multer.diskStorage({
-    destination:'./public/uploads',
-    filename:function(req,file,cb){
-        cb(null,file.fieldname+'-'+Date.now()+path.extname(file.originalname));
+    destination: './public/uploads',
+    filename: function (req, file, cb) {
+        const { id } = req.params;
+
+        cb(null, id + '-' + file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 });
 
 // Init upload
 const upload = multer({
-    storage:storage
-}).array('images',10);
+    storage: storage
+}).array('images', 10);
+
+// Returns an array of dates between the two dates
+const getDates = function (star, end) {
+    var startDate = new Date(star), endDate = new Date(end);
+    var dates = [],
+        currentDate = startDate,
+        addDays = function (days) {
+            var date = new Date(this.valueOf());
+            date.setDate(date.getDate() + days);
+            return date;
+        };
+    while (currentDate <= endDate) {
+        dates.push(currentDate);
+        currentDate = addDays.call(currentDate, 1);
+    }
+    return dates;
+};
 
 // Listar todos los eventos
 router.get('/', (req, res) => {
-    var flag = true, response = [], queries = {};
+    var flag = true, response = [], queries = {}, byDates;
 
     for (var key in req.query) {
         if (req.query.hasOwnProperty(key)) {
@@ -30,6 +49,15 @@ router.get('/', (req, res) => {
         }
     }
     console.log(queries);
+    var fromKey = _.findKey(queries, function (value, key) {
+        return key.indexOf('from') >= 0;
+    });
+
+    byDates = (fromKey) ? true : false;
+    var qKeys = Object.keys(queries);
+    if (byDates) {
+        qKeys = _.difference(qKeys, ['from', 'to']);
+    }
 
 
     if (flag) {
@@ -37,12 +65,9 @@ router.get('/', (req, res) => {
     } else {
         _.each(eventos, (evento, i) => {
             var pos = 0, check = true;
-            var qKeys = Object.keys(queries);
-
             while (qKeys[pos] && check) {
                 var vEvent = evento[qKeys[pos]],
                     vQuery = queries[qKeys[pos]];
-
                 if (vEvent) {
                     if (!(vEvent == vQuery)) {
                         check = false;
@@ -53,9 +78,30 @@ router.get('/', (req, res) => {
                 if (pos == (qKeys.length - 1) && check) {
                     response.push(evento);
                 }
-                pos++
+                pos++;
             }
         });
+
+        if (byDates) {
+            var star = queries.from, end = queries.to;
+            var dates = getDates(star, end);
+            var newResponse = response;
+            response = [];
+            console.log(dates);
+
+            _.each(newResponse, (evento, i) => {
+                console.log(evento.nombre + ', fecha: ' + new Date(evento.fecha).toDateString());
+                _.each(dates, (date, i) => {
+                    console.log('fecha: ' + new Date(date).toDateString());
+                    if (new Date(evento.fecha).toDateString() == new Date(date).toDateString()) {
+                        console.log('we found that!!');
+                        response.push(evento);
+                    }
+                });
+            });
+            // res.status(200).json(response);
+        }
+
         res.status(200).json(response);
     }
 });
@@ -88,6 +134,7 @@ router.post('/', (req, res) => {
 
 // Modificar un evento
 router.put('/:id', (req, res) => {
+    console.log('put method eventos.js');
     console.log(req.body);
     res.status(200).json(req.body);
 });
@@ -95,19 +142,45 @@ router.put('/:id', (req, res) => {
 // Subir imagenes de un evento
 router.post('/:id/images', (req, res) => {
     const { id } = req.params;
+    var response = {};
     // const { nombre, ciudad, lugar, fecha, hora, descripcion, url, categoria, capacidad, costo } = req.body;
     // const id = eventos.length + 1;
     // const newEvento = { ...req.body, id };
     // console.log(newEvento);
     // res.status(200).json(newEvento);
-    console.log('route id: ' + id);
-    upload(req,res, (err) =>{
-        if(err){
+
+    upload(req, res, (err) => {
+        var portada = req.body.portada || req.files[0].originalname;
+        response.imagenes = [];
+        // console.log(req.originalUrl);
+        // console.log(req.body.portada);
+        // console.log(req.files);
+
+        // Generar json de respuesta
+        _.each(req.files, (file, i) => {
+            var imagen = {};
+            console.log(file);
+            imagen.name = file.filename;
+            imagen.url = req.originalUrl + '/' + file.filename;
+            imagen.cover = (file.originalname == portada) ? true : false;
+            response.imagenes.push(imagen);
+        });
+
+        if (err) {
             console.log('There was an error...');
             console.log(err);
-        }else{
-            res.status(200).json({msg:'uploaded successfully'})
+            response.success = false;
+        } else {
+            response.success = true;
+            _.each(eventos, (evento, i) => {
+                console.log(evento.id);
+                if (evento.id == id) {
+                    evento.imagenes = response.imagenes;
+                }
+            });
+            res.status(200).json(response);
             console.log('There was not any error');
+            console.log(response);
         }
     });
 });
