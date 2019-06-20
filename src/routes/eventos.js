@@ -45,15 +45,15 @@ router.get('/', (req, res) => {
     for (var key in req.query) {
         if (req.query.hasOwnProperty(key)) {
             queries[key] = req.query[key];
-            flag = false;
+            flag = false; // Valida si no existe ningún queryparam en la consulta
         }
     }
-    console.log(queries);
+    
     var fromKey = _.findKey(queries, function (value, key) {
         return key.indexOf('from') >= 0;
     });
 
-    byDates = (fromKey) ? true : false;
+    byDates = (fromKey) ? true : false; // Si en la consulta existe 'from', sabe que debe hacer una busqueda entre las fechas
     var qKeys = Object.keys(queries);
     if (byDates) {
         qKeys = _.difference(qKeys, ['from', 'to']);
@@ -64,19 +64,19 @@ router.get('/', (req, res) => {
         res.status(200).json(eventos);
     } else {
         _.each(eventos, (evento, i) => {
-            var pos = 0, check = true;
-            while (qKeys[pos] && check) {
-                var vEvent = evento[qKeys[pos]],
-                    vQuery = queries[qKeys[pos]];
-                if (vEvent) {
-                    if (!(vEvent == vQuery)) {
-                        check = false;
+            var pos = 0, hit = 0;
+            while (qKeys[pos]) {
+                var vEvent = evento[qKeys[pos]].toString(),
+                    vQuery = queries[qKeys[pos]].toString();
+                if (!(typeof vEvent === 'undefined')) {
+                    if (vEvent == vQuery) {
+                        hit += 1;
+                        if (hit == qKeys.length) {
+                            response.push(evento);
+                        }
                     }
                 } else {
                     res.status(400).json({ error: 'At least one filter was wrong' });
-                }
-                if (pos == (qKeys.length - 1) && check) {
-                    response.push(evento);
                 }
                 pos++;
             }
@@ -87,21 +87,16 @@ router.get('/', (req, res) => {
             var dates = getDates(star, end);
             var newResponse = response;
             response = [];
-            console.log(dates);
-
+            
             _.each(newResponse, (evento, i) => {
-                console.log(evento.nombre + ', fecha: ' + new Date(evento.fecha).toDateString());
                 _.each(dates, (date, i) => {
-                    console.log('fecha: ' + new Date(date).toDateString());
                     if (new Date(evento.fecha).toDateString() == new Date(date).toDateString()) {
-                        console.log('we found that!!');
                         response.push(evento);
                     }
                 });
             });
-            // res.status(200).json(response);
         }
-
+        
         res.status(200).json(response);
     }
 });
