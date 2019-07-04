@@ -13,31 +13,55 @@
         "url": "http://cormoran.uis.edu.co/eisi/",
         "descripcion": "El dia indicado se hara una salida recreativa a las cascadas las golondrinas. Estar presente a las 8 am en la Estacion de servicio Lomas del Viento",
         "asistentes": 40,
-        "meinteresa": 10,
-        "compartido": 5,
-        "megusta": 10,
+        "meinteresa": 15,
+        "compartido": 6,
+        "megusta": 13,
         "estado": "creado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            },
+            "comodidad": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            },
+            "entretenido": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            },
+            "interesante": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            }
         },
         "imagenes": [
             {
-                "url": "https://jdc.edu.co/images/2019/05/29/derecho-conov.jpg",
-                "name":"b858b6d5c649bd63718abdb97b6ad56f",
-                "cover":true
+                "url": "https://institutotecnisistemas.com/wp-content/uploads/2018/04/img-requisitos-contable-768x430.jpg",
+                "name": "b858b6d5c649bd63718abdb97b6ad56f",
+                "cover": true
             },
             {
                 "url": "https://i.ytimg.com/vi/E2I60lt0wFQ/maxresdefault.jpg",
-                "name":"cf8b35407fde38b37b606c80d97a36f5",
-                "cover":false
+                "name": "cf8b35407fde38b37b606c80d97a36f5",
+                "cover": false
             },
             {
                 "url": "http://www.ceis.com.co/wp-content/uploads/2015/02/baners-ceis.jpg",
-                "name":"bf11bb199b6d4e6c601753f9b25c68b6",
-                "cover":false
+                "name": "bf11bb199b6d4e6c601753f9b25c68b6",
+                "cover": false
             }
         ]
     },
@@ -56,83 +80,131 @@
         "descripcion": "No se pierda la mejor feria de toda la historia",
         "asistentes": 30,
         "meinteresa": 15,
-        "compartido": 5,
+        "compartido": 8,
         "megusta": 5,
         "estado": "creado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            },
+            "comodidad": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            },
+            "entretenido": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            },
+            "interesante": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+            }
         },
         "imagenes": [
             {
                 "url": "https://www.eleconomista.com.mx/__export/1533821902252/sites/eleconomista/img/2018/08/09/dc5f42a4-40c3-4456-8499-0c24e488faea.jpg_1612941218.jpg",
-                "name":"2ac6ae04449eafe4c55cbf231073c369",
-                "cover":false
+                "name": "2ac6ae04449eafe4c55cbf231073c369",
+                "cover": false
             },
             {
                 "url": "https://cdn.euroinnova.edu.es/euroinnova_es/img_blog/l/funciones_auxiliar_administrativo.jpg",
-                "name":"6401267730cfa24cafcc4c11cee66696",
-                "cover":false
+                "name": "6401267730cfa24cafcc4c11cee66696",
+                "cover": false
             },
             {
                 "url": "https://orientacion.universia.net.co/imgs2011/imagenes/banner_fer-2014_08_21_184137.jpg",
-                "name":"c287b1e5695fc6d566f897b24cbfc2ff",
-                "cover":true
+                "name": "c287b1e5695fc6d566f897b24cbfc2ff",
+                "cover": true
             }
         ]
     },
     {
         "id": "203",
-        "organizador": "ivan12",
+        "organizador": "BrayanG26",
         "nombre": "Convocatoria Futbol Sala EISI",
         "lugar": "Cancha de arena UIS",
-        "fecha": "09/19/2018",
-        "hora": "15:00",
-        "ciudad": "Girón",
+        "fecha": "06/24/2019",
+        "hora": "10:00",
+        "ciudad": "Bucaramanga",
         "capacidad": 140,
         "categoria": "deporte",
         "sePaga": true,
         "url": "",
-        "descripcion": "Evento de teatro para la comunidad universitaria UIS",
+        "descripcion": "Esta convocatoria tendrá lugar en la cancha UIS, al lado del Coliseo a las 12:00 m.",
         "asistentes": 40,
         "meinteresa": 10,
-        "compartido": 6,
+        "compartido": 9,
         "megusta": 5,
-        "estado": "creado",
+        "estado": "publicado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 5,
+                "2": 3,
+                "3": 5,
+                "4": 8,
+                "5": 1
+            },
+            "comodidad": {
+                "1": 5,
+                "2": 3,
+                "3": 3,
+                "4": 8,
+                "5": 2
+            },
+            "entretenido": {
+                "1": 5,
+                "2": 3,
+                "3": 4,
+                "4": 8,
+                "5": 2
+            },
+            "interesante": {
+                "1": 3,
+                "2": 3,
+                "3": 3,
+                "4": 2,
+                "5": 1
+            }
         },
         "imagenes": [
             {
-                "url": "https://images.pexels.com/photos/257840/pexels-photo-257840.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-                "name":"636e87a2642e676cb0c3bb0a4242b2b3",
-                "cover":true
+                "url": "https://pbs.twimg.com/media/DqJRrRYWwAAecR_.jpg",
+                "name": "636e87a2642e676cb0c3bb0a4242b2b3",
+                "cover": true
             },
             {
                 "url": "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-                "name":"a407b21f6421015c3421c93d02aa7a37",
-                "cover":false
+                "name": "a407b21f6421015c3421c93d02aa7a37",
+                "cover": false
             },
             {
                 "url": "https://images.pexels.com/photos/2333750/pexels-photo-2333750.jpeg?cs=srgb&dl=architecture-city-clouds-2333750.jpg&fm=jpg",
-                "name":"8ce4b9715be1f1e0147ce89b2ea837cb",
-                "cover":false
+                "name": "8ce4b9715be1f1e0147ce89b2ea837cb",
+                "cover": false
             },
             {
                 "url": "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-                "name":"707bc1013b5d74093e7d74421a15efe2",
-                "cover":false
+                "name": "707bc1013b5d74093e7d74421a15efe2",
+                "cover": false
             }
         ]
     },
     {
         "id": "204",
-        "organizador": "bguerrerof",
+        "organizador": "BrayanG26",
         "nombre": "Convocatoria auxiliar contable CEIS 2019",
         "lugar": "LP 310",
         "fecha": "06/15/2019",
@@ -142,38 +214,62 @@
         "categoria": "empleo",
         "sePaga": false,
         "url": "",
-        "descripcion": "Metodo de prueba para probar mi propio backend",
-        "asistentes": 40,
+        "descripcion": "La convocatoria se llevara a cabo en el salon 319 de Laboratorios Pesado de la Universidad Industrial de Santander",
+        "asistentes": 35,
         "meinteresa": 2,
         "compartido": 5,
-        "megusta": 1,
-        "estado": "creado",
+        "megusta": 10,
+        "estado": "eliminado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 5,
+                "2": 32,
+                "3": 5,
+                "4": 8,
+                "5": 10
+            },
+            "comodidad": {
+                "1": 5,
+                "2": 3,
+                "3": 15,
+                "4": 8,
+                "5": 2
+            },
+            "entretenido": {
+                "1": 5,
+                "2": 3,
+                "3": 4,
+                "4": 8,
+                "5": 2
+            },
+            "interesante": {
+                "1": 3,
+                "2": 3,
+                "3": 3,
+                "4": 6,
+                "5": 1
+            }
         },
         "imagenes": [
             {
                 "url": "https://images.pexels.com/photos/257840/pexels-photo-257840.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-                "name":"fc98ea4f957082eedfd62de7c5c7e298",
-                "cover":true
+                "name": "fc98ea4f957082eedfd62de7c5c7e298",
+                "cover": true
             },
             {
                 "url": "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-                "name":"fc5176b5e52e99f83fba5c1050501374",
-                "cover":false
+                "name": "fc5176b5e52e99f83fba5c1050501374",
+                "cover": false
             },
             {
                 "url": "https://images.pexels.com/photos/2333750/pexels-photo-2333750.jpeg?cs=srgb&dl=architecture-city-clouds-2333750.jpg&fm=jpg",
-                "name":"c56d0b6731916c2634dcd4398038fe81",
-                "cover":false
+                "name": "c56d0b6731916c2634dcd4398038fe81",
+                "cover": false
             },
             {
                 "url": "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-                "name":"e4339a84a578732b9e985330bb20e9d8",
-                "cover":false
+                "name": "e4339a84a578732b9e985330bb20e9d8",
+                "cover": false
             }
         ]
     },
@@ -189,38 +285,62 @@
         "categoria": "deporte",
         "sePaga": true,
         "url": "https://es.wikipedia.org/wiki/Rally_Dakar_de_2019",
-        "descripcion": "Metodo de prueba para probar mi propio backend",
-        "asistentes": 40,
+        "descripcion": "El Rally Dakar de 2019 fue la cuadragésima primera edición de la carrera de rally raid más exigente del mundo. Se realizó entre el 6 y el 17 de enero de ese año, por undécima vez consecutiva en América del Sur, tras la cancelación de la edición de 2008 en África por amenazas terroristas y por primera vez en un solo país Perú.",
+        "asistentes": 45,
         "meinteresa": 5,
-        "compartido": 5,
-        "megusta": 1,
+        "compartido": 8,
+        "megusta": 9,
         "estado": "publicado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 5,
+                "2": 3,
+                "3": 5,
+                "4": 8,
+                "5": 1
+            },
+            "comodidad": {
+                "1": 50,
+                "2": 35,
+                "3": 32,
+                "4": 8,
+                "5": 12
+            },
+            "entretenido": {
+                "1": 5,
+                "2": 3,
+                "3": 4,
+                "4": 8,
+                "5": 2
+            },
+            "interesante": {
+                "1": 3,
+                "2": 3,
+                "3": 3,
+                "4": 2,
+                "5": 1
+            }
         },
         "imagenes": [
             {
                 "url": "https://img.elcomercio.pe/files/ec_article_multimedia_gallery/uploads/2018/07/18/5b4fa7f7919ca.jpeg",
-                "name":"15af9ad66519525c2573a8bc9678cd50",
-                "cover":false
+                "name": "15af9ad66519525c2573a8bc9678cd50",
+                "cover": false
             },
             {
                 "url": "https://img.elcomercio.pe/files/ec_article_multimedia_gallery/uploads/2018/11/27/5bfd884698ada.jpeg",
-                "name":"5f63db411dc8ca12f01c698fc444f946",
-                "cover":false
+                "name": "5f63db411dc8ca12f01c698fc444f946",
+                "cover": false
             },
             {
                 "url": "http://www.motomundi.cl/Content/uploads/1/Blog/ruta%20dakar%202019-min.png",
-                "name":"58101a0810c90706a31db49887b75c23",
-                "cover":true
+                "name": "58101a0810c90706a31db49887b75c23",
+                "cover": true
             },
             {
                 "url": "http://motorsports.com.uy/wp-content/uploads/peru.jpg",
-                "name":"b141a740178359bdb99a1805ee6dbf3a",
-                "cover":false
+                "name": "b141a740178359bdb99a1805ee6dbf3a",
+                "cover": false
             }
         ]
     },
@@ -236,38 +356,62 @@
         "categoria": "deporte",
         "sePaga": true,
         "url": "",
-        "descripcion": "Metodo de prueba para probar mi propio backend",
+        "descripcion": "El Abierto de Australia 2019 fue un torneo de tenis celebrado en las pistas de superficie dura del Melbourne Park, situado en Melbourne. El campeonato se llevó a cabo entre el 14 y el 27 de enero de 2019​.",
         "asistentes": 15,
         "meinteresa": 10,
-        "compartido": 2,
-        "megusta": 10,
+        "compartido": 23,
+        "megusta": 11,
         "estado": "publicado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 5,
+                "2": 3,
+                "3": 5,
+                "4": 8,
+                "5": 1
+            },
+            "comodidad": {
+                "1": 3,
+                "2": 3,
+                "3": 5,
+                "4": 8,
+                "5": 9
+            },
+            "entretenido": {
+                "1": 5,
+                "2": 3,
+                "3": 4,
+                "4": 8,
+                "5": 2
+            },
+            "interesante": {
+                "1": 0,
+                "2": 2,
+                "3": 3,
+                "4": 10,
+                "5": 16
+            }
         },
         "imagenes": [
             {
                 "url": "https://images.pexels.com/photos/257840/pexels-photo-257840.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-                "name":"40f9453f1733357c6aaeb6edd54a1f36",
-                "cover":true
+                "name": "40f9453f1733357c6aaeb6edd54a1f36",
+                "cover": true
             },
             {
                 "url": "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-                "name":"0c94785cc17c6b4e02f19a30cf02c679",
-                "cover":false
+                "name": "0c94785cc17c6b4e02f19a30cf02c679",
+                "cover": false
             },
             {
                 "url": "https://images.pexels.com/photos/2333750/pexels-photo-2333750.jpeg?cs=srgb&dl=architecture-city-clouds-2333750.jpg&fm=jpg",
-                "name":"1927b77bef4f6c5ba277e40e80eb2cec",
-                "cover":false
+                "name": "1927b77bef4f6c5ba277e40e80eb2cec",
+                "cover": false
             },
             {
                 "url": "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-                "name":"105e7ba5d579e1b06d7f156820bdf1ac",
-                "cover":false
+                "name": "105e7ba5d579e1b06d7f156820bdf1ac",
+                "cover": false
             }
         ]
     },
@@ -281,49 +425,63 @@
         "ciudad": "Indian",
         "capacidad": 120,
         "categoria": "deporte",
-        "sePaga": true,
+        "sePaga": false,
         "url": "https://www.atptour.com/en/tournaments/indian-wells/404/overview",
         "descripcion": "Los ATP Masters 1000 son una serie de nueve torneos de tenis que forman parte del ATP Tour organizado por la Asociación de Tenistas Profesionales (ATP), celebrado anualmente durante todo el año en Europa, Norteamérica y (desde 2009) Asia. Son los torneos más importantes después de los Grand Slam, siendo así para los mejores jugadores masculinos en el circuito profesional la serie que constituye los torneos más prestigiosos del tenis masculino.",
-        "asistentes": 2,
+        "asistentes": 39,
         "meinteresa": 10,
-        "compartido": 5,
+        "compartido": 50,
         "megusta": 4,
         "estado": "publicado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 5,
+                "2": 3,
+                "3": 5,
+                "4": 8,
+                "5": 1
+            },
+            "comodidad": {
+                "1": 5,
+                "2": 3,
+                "3": 4,
+                "4": 8,
+                "5": 2
+            },
+            "entretenido": {
+                "1": 6,
+                "2": 3,
+                "3": 4,
+                "4": 8,
+                "5": 2
+            },
+            "interesante": {
+                "1": 3,
+                "2": 4,
+                "3": 3,
+                "4": 3,
+                "5": 2
+            }
         },
         "imagenes": [
             {
                 "url": "https://www.tennistv.com/icons/series/ATP_1000.png",
-                "name":"9eb3dd773e5758d6e0f1f60dd59b3f01",
-                "cover":true
-            },
-            {
-                "url": "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-                "name":"27da5204417116448d4eb828dc021b22",
-                "cover":false
+                "name": "9eb3dd773e5758d6e0f1f60dd59b3f01",
+                "cover": true
             },
             {
                 "url": "https://images.pexels.com/photos/2333750/pexels-photo-2333750.jpeg?cs=srgb&dl=architecture-city-clouds-2333750.jpg&fm=jpg",
-                "name":"a1cd8b276312f553c15ee63c457c6539",
-                "cover":false
-            },
-            {
-                "url": "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-                "name":"b2acca77962679213c1c90a07334f292",
-                "cover":false
+                "name": "a1cd8b276312f553c15ee63c457c6539",
+                "cover": false
             }
         ]
     },
     {
         "id": "208",
-        "organizador": "BrayanG",
+        "organizador": "BrayanG26",
         "nombre": "Tour de Flandes",
         "lugar": "Desconocido",
-        "fecha": "07/04/2019",
+        "fecha": "07/07/2019",
         "hora": "10:00",
         "ciudad": "Flandes",
         "capacidad": 40,
@@ -332,26 +490,50 @@
         "url": "https://www.visitflanders.com/es/que--hacer/eventos/top/tour-de-flandes-para-ciclistas-amateur.jsp",
         "descripcion": "El Tour de Flandes (oficialmente De Ronde van Vlaanderen) es una carrera de un día profesional de ciclismo en ruta que se disputa en la región de Flandes, en Bélgica. Actualmente, recorre un trayecto desde la provincia de Amberes, concretamente desde su ciudad homónima, hasta las ardenas flamencas, al sur de Flandes Oriental, donde se encuentra los alicientes característicos de la carrera.",
         "asistentes": 10,
-        "meinteresa": 5,
+        "meinteresa": 7,
         "compartido": 5,
-        "megusta": 10,
-        "estado": "ejecutado",
+        "megusta": 15,
+        "estado": "publicado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 5,
+                "2": 3,
+                "3": 5,
+                "4": 8,
+                "5": 1
+            },
+            "comodidad": {
+                "1": 5,
+                "2": 3,
+                "3": 3,
+                "4": 8,
+                "5": 2
+            },
+            "entretenido": {
+                "1": 5,
+                "2": 3,
+                "3": 5,
+                "4": 6,
+                "5": 2
+            },
+            "interesante": {
+                "1": 3,
+                "2": 3,
+                "3": 3,
+                "4": 2,
+                "5": 1
+            }
         },
         "imagenes": [
             {
                 "url": "https://ak3.picdn.net/shutterstock/videos/26181773/thumb/11.jpg",
-                "name":"b2acca77962679213c1c90a07334f292",
-                "cover":true
+                "name": "b2acca77962679213c1c90a07334f292",
+                "cover": true
             },
             {
                 "url": "https://ak7.picdn.net/shutterstock/videos/1022950627/thumb/2.jpg",
-                "name":"cef7109eb566c1277222e81dea9ca5b3",
-                "cover":false
+                "name": "cef7109eb566c1277222e81dea9ca5b3",
+                "cover": false
             }
         ]
     },
@@ -360,7 +542,7 @@
         "organizador": "BrayanG26",
         "nombre": "Estreno: Capitana Marvel",
         "lugar": "CineColombia Cabecera",
-        "fecha": "06/14/2019",
+        "fecha": "06/30/2019",
         "hora": "22:00",
         "ciudad": "Bucaramanga",
         "capacidad": 150,
@@ -374,31 +556,55 @@
         "megusta": 5,
         "estado": "publicado",
         "calificacion": {
-            "logistica": 0,
-            "comodidad": 0,
-            "entretenido": 0,
-            "interesante": 0
+            "logistica": {
+                "1": 5,
+                "2": 3,
+                "3": 5,
+                "4": 8,
+                "5": 1
+            },
+            "comodidad": {
+                "1": 5,
+                "2": 4,
+                "3": 3,
+                "4": 8,
+                "5": 2
+            },
+            "entretenido": {
+                "1": 5,
+                "2": 3,
+                "3": 4,
+                "4": 8,
+                "5": 2
+            },
+            "interesante": {
+                "1": 6,
+                "2": 3,
+                "3": 5,
+                "4": 2,
+                "5": 1
+            }
         },
         "imagenes": [
             {
                 "url": "https://img.depor.com/files/ec_article_multimedia_gallery/uploads/2018/10/07/5bba8fd0e4164.jpeg",
-                "name":"ad794ff333fcb22e31a4c38884582b4c",
-                "cover":true
+                "name": "ad794ff333fcb22e31a4c38884582b4c",
+                "cover": true
             },
             {
                 "url": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2019/02/Nuevo%20Poster%20Capitana%20Marvel%202.jpg?itok=67nCdFEi",
-                "name":"8f773126034f289bceacee3a5cc2df51",
-                "cover":false
+                "name": "8f773126034f289bceacee3a5cc2df51",
+                "cover": false
             },
             {
                 "url": "https://i1.wp.com/codigoespagueti.com/wp-content/uploads/2018/09/captain-marvel-poster-1.jpg?resize=1080%2C600&quality=90&ssl=1",
-                "name":"401ac315f6426f628fe12970972f59cd",
-                "cover":false
+                "name": "401ac315f6426f628fe12970972f59cd",
+                "cover": false
             },
             {
                 "url": "https://pulpfictioncine.com/download/multimedia.normal.bc88f2f0b5b774cd.4361707461696e2d4d617276656c2d4f64656f6e2d706f737465722d686561645f6e6f726d616c2e6a7067.jpg",
-                "name":"5c8bd95556fcd2000fa2b2f430bf0146",
-                "cover":false
+                "name": "5c8bd95556fcd2000fa2b2f430bf0146",
+                "cover": false
             }
         ]
     }

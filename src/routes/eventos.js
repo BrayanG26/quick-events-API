@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
             flag = false; // Valida si no existe ningún queryparam en la consulta
         }
     }
-    
+
     var fromKey = _.findKey(queries, function (value, key) {
         return key.indexOf('from') >= 0;
     });
@@ -87,7 +87,7 @@ router.get('/', (req, res) => {
             var dates = getDates(star, end);
             var newResponse = response;
             response = [];
-            
+
             _.each(newResponse, (evento, i) => {
                 _.each(dates, (date, i) => {
                     if (new Date(evento.fecha).toDateString() == new Date(date).toDateString()) {
@@ -96,7 +96,7 @@ router.get('/', (req, res) => {
                 });
             });
         }
-        
+
         res.status(200).json(response);
     }
 });
@@ -137,6 +137,10 @@ router.put('/:id', (req, res) => {
 // Subir imagenes de un evento
 router.post('/:id/images', (req, res) => {
     const { id } = req.params;
+    console.log('id - ' + id);
+    // console.log(req.get('Content-type'));
+    // console.log(JSON.stringify(req.headers));
+    console.log(req.body.portada);
     var response = {};
     // const { nombre, ciudad, lugar, fecha, hora, descripcion, url, categoria, capacidad, costo } = req.body;
     // const id = eventos.length + 1;
@@ -145,22 +149,27 @@ router.post('/:id/images', (req, res) => {
     // res.status(200).json(newEvento);
 
     upload(req, res, (err) => {
+        // console.log('req.files');
+        // console.log(req.files);
+        console.log('req.body.portada - '+req.body.portada);
+        // console.log('complete request');
+        // console.log(req);
         var portada = req.body.portada || req.files[0].originalname;
+        console.log(portada);
         response.imagenes = [];
         // console.log(req.originalUrl);
-        // console.log(req.body.portada);
-        // console.log(req.files);
 
         // Generar json de respuesta
         _.each(req.files, (file, i) => {
             var imagen = {};
-            console.log(file);
+            // console.log('file - ' + (i + 1));
+            // console.log(file);
             imagen.name = file.filename;
-            imagen.url = req.originalUrl + '/' + file.filename;
+            imagen.url = req.protocol + '://' + req.get('host') + req.originalUrl + '/' + file.filename;
             imagen.cover = (file.originalname == portada) ? true : false;
             response.imagenes.push(imagen);
         });
-
+        console.log(response);
         if (err) {
             console.log('There was an error...');
             console.log(err);
@@ -168,7 +177,6 @@ router.post('/:id/images', (req, res) => {
         } else {
             response.success = true;
             _.each(eventos, (evento, i) => {
-                console.log(evento.id);
                 if (evento.id == id) {
                     evento.imagenes = response.imagenes;
                 }
@@ -178,5 +186,70 @@ router.post('/:id/images', (req, res) => {
             console.log(response);
         }
     });
+});
+
+
+// Obtener imagen del evento
+router.get('/:id/images/:name', (req, res) => {
+    var id = req.params.id,
+        imgName = req.params.name;
+    // console.log(req.params.name);
+    console.log(`${id} : ${imgName}`);
+    var wasFound = false;
+    _.each(eventos, (evento, i) => {
+        if (evento.id == id) {
+            wasFound = true;
+        }
+    });
+
+    if (wasFound) {
+        console.log('Se encontró el evento');
+
+    }
+
+    // console.log('id - ' + id);
+    // console.log(req.params);
+    // console.log(req.get('Content-type'));
+    // console.log(JSON.stringify(req.headers));
+    // console.log(req.body.portada);
+    var response = {};
+    // const { nombre, ciudad, lugar, fecha, hora, descripcion, url, categoria, capacidad, costo } = req.body;
+    // const id = eventos.length + 1;
+    // const newEvento = { ...req.body, id };
+    // console.log(newEvento);
+    // res.status(200).json(newEvento);
+
+    /*upload(req, res, (err) => {
+        // console.log('req.files');
+        // console.log(req.files);
+        console.log(req.body.portada);
+        var portada = req.body.portada || req.files[0].originalname;
+        console.log(portada);
+        response.imagenes = [];
+        // console.log(req.originalUrl);
+
+        // Generar json de respuesta
+        _.each(req.files, (file, i) => {
+            var imagen = {};
+            console.log('file - ' + (i + 1));
+            console.log(file);
+            imagen.name = file.filename;
+            imagen.url = req.protocol + '://' + req.get('host') + req.originalUrl + '/' + file.filename;
+            imagen.cover = (file.originalname == portada) ? true : false;
+            response.imagenes.push(imagen);
+        });
+        console.log(response);
+        if (err) {
+            console.log('There was an error...');
+            console.log(err);
+            response.success = false;
+        } else {
+            response.success = true;
+            
+            res.status(200).json(response);
+            console.log('There was not any error');
+            console.log(response);
+        }
+    });*/
 });
 module.exports = router;
