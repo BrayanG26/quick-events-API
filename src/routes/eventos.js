@@ -215,12 +215,12 @@ router.post('/', (req, res) => {
     }
     console.log(newEvento);
 
-    /* if (!(Array.isArray(imagenes) && imagenes.length)) {
+    if (imagenes.length == 0) {
         imagenes.push(imagen);
         newEvento.imagenes = imagenes;
     } else {
         console.log('imagenes no existe');
-    } */
+    }
     newEvento.asistentes = 0;
     newEvento.meinteresa = 0;
     newEvento.compartido = 0;
@@ -229,6 +229,7 @@ router.post('/', (req, res) => {
     response.evento = newEvento;
     response.msg = 'Se creó el evento exitosamente.';
     response.id = id;
+    response.success = true;
     res.status(200).json(response);
 });
 

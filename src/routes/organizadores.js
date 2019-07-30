@@ -7,7 +7,7 @@ const organizadores = require('../organizadores.json');
 // Listar todos los organizadores
 router.get('/', (req, res) => {
     var flag = false, response = {}, queries = {};
-    response.validation = false;
+    response.success = false;
     for (var key in req.query) {
         if (req.query.hasOwnProperty(key)) {
             queries[key] = req.query[key];
@@ -24,11 +24,11 @@ router.get('/', (req, res) => {
         _.each(organizadores, (organizador, i) => {
             if (organizador['usuario'] == usuario && organizador['password'] == password) {
                 response.idUser = organizador.id;
-                response.validation = true;
+                response.success = true;
                 response.msg = 'The user exists';
             }
         });
-        if (!response.validation) {
+        if (!response.success) {
             response.msg = 'The user not exists';
         }
         res.status(200).json(response);
@@ -46,6 +46,7 @@ router.get('/:id', (req, res) => {
         if (organizador.id == id) {
             response.msg = "The user was found successfully";
             response.organizador = organizador;
+            response.success = true;
             delete response.organizador.password;
         }
     });
@@ -59,7 +60,7 @@ router.get('/:id', (req, res) => {
 
 // Modificar un organizador
 router.put('/:id', (req, res) => {
-    console.log('put method organizadores.js');
+    console.log('put method organizadores');
     console.log(req.body);
     var response = {};
     const { id } = req.params;
@@ -67,25 +68,31 @@ router.put('/:id', (req, res) => {
     _.each(organizadores, (organizador, i) => {
         if (organizador.id == id) {
             console.log(organizador);
-            if (password) {
-                console.log('> ' + password);
-                console.log('> ' + organizador.password);
-
+            if (nPassword) {
+                console.log('ud desea modificar su contraseña');
+                console.log(password);
+                console.log(organizador.password);
                 if (organizador.password == password) {
                     console.log('verificar si coinciden las contraseñas');
                     organizador.password = nPassword;
                     console.log(organizador);
                     response.success = true;
-                    response.usuario = organizador;
-                    delete response.usuario.password;
+                    response.organizador = organizador;
+                    delete response.organizador.password;
                     res.status(200).json(response);
                 } else {
                     console.log('Your password was wrong');
-                    res.status(500).json({ success: false, error: 'Your password was wrong' });
+                    res.status(500).json({ success: false, msg: 'Your password was wrong' });
                 }
             } else {
-                organizador = { ...req.body, id };
-                res.status(200).json(organizador);
+                console.log('ud no desea modificar su contraseña');
+                const updated = { ...req.body, id };
+                console.log(updated);
+                organizadores[i] = updated;
+                response.success = true;
+                response.organizador = organizador;
+                delete response.organizador.password;
+                res.status(200).json(response);
             }
         }
     });
